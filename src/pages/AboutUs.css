@@ -1,0 +1,33 @@
+.about-us {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .social-icons a {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--primary-color);
+  }
+  
