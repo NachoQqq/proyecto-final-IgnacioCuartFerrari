@@ -9,8 +9,8 @@ const Products = () => {
   const { addToCart } = useContext(CartContext);
 
   const products = [
-    { id: 1, name: 'Zapatillas Nike', description: 'Las mejores para jugar', price: 120, image: '/assets/shoes.jpg' },
-    { id: 2, name: 'Balón Spalding', description: 'Balón profesional', price: 60, image: '/assets/ball.jpg' },
+    { id: 1, name: 'Zapatillas Nike', description: 'Las mejores para jugar', price: 120, image: '/assets/sneaker1.jpg' },
+    { id: 2, name: 'Balón Spalding', description: 'Balón profesional', price: 60, image: './assets/ball.jpg' },
     // Más productos...
   ];
 
