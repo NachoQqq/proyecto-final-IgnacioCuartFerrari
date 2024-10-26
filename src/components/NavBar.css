@@ -1,18 +1,33 @@
-nav {
+/* src/components/NavBar.css */
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    background-color: var(--primary-color);
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: white;
   }
   
-  nav a {
+  .navbar h1 {
+    font-size: 24px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    margin: 0 15px;
   }
   
-  nav a:hover {
-    color: var(--accent-color);
+  .cart-count {
+    color: #ff6600;
+    font-weight: bold;
   }
   

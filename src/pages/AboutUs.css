@@ -1,33 +1,30 @@
+/* src/pages/AboutUs.css */
 .about-us {
+    padding: 20px;
     text-align: center;
-    padding: 50px;
-    background-color: var(--secondary-color);
-    color: white;
+    color: #333;
   }
   
-  .about-us h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  .values, .social-media {
+    margin: 20px 0;
   }
   
-  .about-us p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+  .values ul {
+    list-style: none;
+    padding: 0;
   }
   
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  .values li {
+    margin: 8px 0;
   }
   
-  .social-icons a {
-    font-size: 2rem;
-    color: white;
-    transition: color 0.3s ease;
+  .social-links a {
+    margin: 0 10px;
+    color: #ff6600;
+    text-decoration: none;
   }
   
-  .social-icons a:hover {
-    color: var(--primary-color);
+  .social-links a:hover {
+    color: #ff4500;
   }
   

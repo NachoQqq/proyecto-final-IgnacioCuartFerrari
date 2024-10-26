@@ -1,28 +1,34 @@
 // src/pages/Cart.jsx
-import { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React from 'react';
 import './Cart.css';
 
-const Cart = () => {
-  const { cart, removeFromCart, totalPrice } = useContext(CartContext);
-
+const Cart = ({ cartItems, total, removeItem }) => {
   return (
-    <section className="cart">
-      <h1>Carrito de Compras</h1>
-      {cart.length > 0 ? (
-        cart.map((item) => (
-          <div key={item.id}>
-            <p>{item.name}</p>
-            <p>${item.price}</p>
-            <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
-          </div>
-        ))
+    <div className="cart">
+      <h2>Your Shopping Cart</h2>
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty.</p>
       ) : (
-        <p>El carrito está vacío</p>
+        <div>
+          {cartItems.map((item) => (
+            <div key={item.id} className="cart-item">
+              <img src={item.image} alt={item.name} />
+              <div className="cart-item-details">
+                <h3>{item.name}</h3>
+                <p>Quantity: {item.quantity}</p>
+                <p>Price: ${item.price}</p>
+                <button onClick={() => removeItem(item.id)}>Remove</button>
+              </div>
+            </div>
+          ))}
+          <div className="cart-summary">
+            <h3>Subtotal: ${total}</h3>
+            <h3>Total Items: {cartItems.reduce((acc, item) => acc + item.quantity, 0)}</h3>
+            <button className="checkout-btn">Proceed to Checkout</button>
+          </div>
+        </div>
       )}
-      <h2>Total: ${totalPrice}</h2>
-      <button>Pagar</button>
-    </section>
+    </div>
   );
 };
 
