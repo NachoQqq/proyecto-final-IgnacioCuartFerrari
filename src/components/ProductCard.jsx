@@ -1,16 +1,21 @@
-// src/components/ProductCard.jsx
 import React from 'react';
-import './ProductCard.css'; // Para el componente de las tarjetas
 
 const ProductCard = ({ product }) => {
+  const { id, name, price, image, stock } = product;
+
+  const handleAddToCart = () => {
+    console.log(`${name} added to cart`);
+  };
+
   return (
-    <div className="card">
-      <img src={product.image} alt={product.name} />
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <button>Add to Cart</button>
+    <div className="product-card">
+      <img src={image} alt={name} />
+      <h3>{name}</h3>
+      <p>Price: ${price.toFixed(2)}</p>
+      <p>Stock: {stock}</p>
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 };
 
-export default ProductCard;  // Exportar por defecto
+export default ProductCard;

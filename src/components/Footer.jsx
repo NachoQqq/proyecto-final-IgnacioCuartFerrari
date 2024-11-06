@@ -1,13 +1,17 @@
-// src/components/Footer.jsx
 import React from 'react';
-import './Footer.css';  // Importar los estilos aquí
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer>
-      <p>© 2024 BasketShop. All rights reserved.</p>
+    <footer className="footer">
+      <div className="footer-content">
+        <p>&copy; 2024 Ecommerce Basket. All rights reserved.</p>
+        <nav>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+        </nav>
+      </div>
     </footer>
   );
-};
+}
 
 export default Footer;

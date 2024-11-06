@@ -1,12 +1,13 @@
-// src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { CartProvider } from './context/CartContext';
-import './styles/global.css';  
+import './styles/styles.css';  // Asegúrate de que el CSS esté correctamente importado
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <CartProvider>
-    <App />
-  </CartProvider>
+  <React.StrictMode>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </React.StrictMode>
 );

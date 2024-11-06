@@ -1,0 +1,252 @@
+/* Variables de colores */
+:root {
+  --primary-color: #FF5733;
+  --secondary-color: #1A1A1D;
+  --accent-color: #C70039;
+  --text-color: #FFFFFF;
+  --link-color: #FFD700;
+}
+
+/* Reset de estilos básicos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General de body */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer a {
+  color: var(--text-color);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Home Styles */
+.home-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.home-hero {
+  background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.explore-btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Feature Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* About Us Page */
+.about-us {
+  text-align: center;
+  padding: 2rem;
+}
+
+.mission-vision {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.mission,
+.vision {
+  width: 45%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+
+.social-links a {
+  color: var(--text-color);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Auth Page */
+.auth-container {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Products Page */
+.products-page {
+  padding: 2rem;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Cart Styles */
+.cart-container {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 8px;
+}
+
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.remove-button,
+.clear-cart-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover,
+.clear-cart-button:hover {
+  background-color: var(--primary-color);
+}
+
+.total-amount {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Checkout Page */
+.checkout-container {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.checkout-container input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Item Detail Page */
+.item-detail {
+  padding: 2rem;
+  background-color: var(--secondary-color);
+}
+
+.item-detail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
